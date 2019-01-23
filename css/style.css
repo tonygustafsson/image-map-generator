@@ -1,15 +1,11 @@
 h1 {
     font-family: georgia;
-    letter-spacing: 0.1em;
     text-decoration: underline;
-    padding-left: 1em;
 }
 
 h2 {
     font-family: georgia;
-    letter-spacing: 0.1em;
     text-decoration: underline;
-    padding-left: 1em;
 }
 
 div#wrapper {
@@ -39,6 +35,15 @@ div#arealist {
     margin-left: 1em;
     padding: 1em;
     border: 2px;
+}
+
+#arealist a {
+    font-size: 120%;
+    line-height: 1.5;
+}
+
+#arealist a:hover {
+    text-decoration: underline;
 }
 
 a {
