@@ -1,37 +1,35 @@
 <!DOCTYPE html>
-<html lang="sv">
+<html lang="en">
+    <head>
+        <link rel="stylesheet" type="text/css" media="screen" href="css/jquery-ui-1.8.20.custom.css" />
+        <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
 
-<head>
-	<link rel="stylesheet" type="text/css" media="screen" href="css/jquery-ui-1.8.20.custom.css">
-	<link rel="stylesheet" type="text/css" media="screen" href="css/style.css">
-	<script src="scripts/jquery-1.7.2.min.js"></script>
-	<script src="scripts/jquery-ui-1.8.20.custom.min.js"></script>
-	<script src="scripts/custom.js"></script>
-</head>
+        <script src="scripts/jquery-1.7.2.min.js"></script>
+        <script src="scripts/jquery-ui-1.8.20.custom.min.js"></script>
+        <script src="scripts/custom.js"></script>
+    </head>
 
-<body>
-	<h1>ImageMap Test</h1>
+    <body>
+        <div class="controls">
+            <h1>ImageMap Test</h1>
 
-	<div id="wrapper">
-		<img id="photo" src="images/test1.jpg">
-	</div>
-	
-	<div id="arealist"></div>
-	
-	<form id="article_form" method="post" action="#">
-		Artikelnummer: <input id="article_input" type="text" name="article_nr">
-		<input type="button" value="Save" onclick="saveArticleNr()">
-		<input type="button" value="Delete" onclick="deleteArea()">
-	</form>
-	
-	<form id="controls" method="post" action="#">
-		<input type="button" value="Generate" onclick="generateImageMap()">
-		<input type="button" value="Test 1" onclick="changeImage('test1.jpg')">
-		<input type="button" value="Test 2" onclick="changeImage('test2.jpg')">
-		<input type="button" value="Test 3" onclick="changeImage('test3.jpg')">
-		<input type="button" value="Test 4" onclick="changeImage('test4.jpg')">
-	</form>
+            <div id="wrapper"><img id="photo" src="images/test1.jpg" /></div>
 
-</body>
+            <div id="arealist"></div>
 
+            <form id="article_form" method="post" action="#">
+                Artikelnummer: <input id="article_input" type="text" name="article_nr" /> <input type="button" value="Save" onclick="saveArticleNr()" />
+                <input type="button" value="Delete" onclick="deleteArea()" />
+            </form>
+
+            <form id="controls" method="post" action="#">
+                <input type="button" value="Generate" onclick="generateImageMap()" /> <input type="button" value="Test 1" onclick="changeImage('test1.jpg')" />
+                <input type="button" value="Test 2" onclick="changeImage('test2.jpg')" />
+                <input type="button" value="Test 3" onclick="changeImage('test3.jpg')" />
+                <input type="button" value="Test 4" onclick="changeImage('test4.jpg')" />
+            </form>
+        </div>
+
+        <div class="generated-result"></div>
+    </body>
 </html>

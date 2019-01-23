@@ -1,58 +1,69 @@
 h1 {
-	font-family: georgia;
-	letter-spacing: 0.1em;
-	text-decoration:  underline;
-	padding-left: 1em;
+    font-family: georgia;
+    letter-spacing: 0.1em;
+    text-decoration: underline;
+    padding-left: 1em;
 }
 
 h2 {
-	font-family: georgia;
-	letter-spacing: 0.1em;
-	text-decoration:  underline;
-	padding-left: 1em;
+    font-family: georgia;
+    letter-spacing: 0.1em;
+    text-decoration: underline;
+    padding-left: 1em;
 }
 
 div#wrapper {
-	position: relative;
-	float: left;
-	clear: both;
-	background: transparent;
-	width: auto;
-	height: auto;
-	margin: 0;
-	padding: 0;	
+    position: relative;
+    float: left;
+    clear: both;
+    background: transparent;
+    width: auto;
+    height: auto;
+    margin: 0;
+    padding: 0;
 }
 
 img#photo {
-	margin: 0;
-	padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 form#article_form {
-	display: none;
-	float: left;
-	clear: both;
+    display: none;
+    float: left;
+    clear: both;
 }
 
 div#arealist {
-	float: left;
-	margin-left: 1em;
-	padding: 1em;
-	border: 2px;
+    float: left;
+    margin-left: 1em;
+    padding: 1em;
+    border: 2px;
 }
 
 a {
-	text-decoration: none;
-	color: #000;
+    text-decoration: none;
+    color: #000;
 }
 
 area:hover {
-	color: red;
-	border: 1px red solid;
+    color: red;
+    border: 1px red solid;
 }
 
 form#controls {
-	float: left;
-	clear: both;
-	padding-top: 2em;
+    float: left;
+    clear: both;
+    padding-top: 2em;
+}
+
+.controls {
+    width: 100%;
+    float: left;
+}
+
+.generated-result {
+    width: 100%;
+    float: left;
+    padding-top: 2em;
 }
