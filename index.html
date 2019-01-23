@@ -18,15 +18,14 @@
             <div id="arealist"></div>
 
             <form id="article_form" method="post" action="#">
-                Artikelnummer: <input id="article_input" type="text" name="article_nr" /> <input type="button" value="Save" onclick="saveArticleNr()" />
-                <input type="button" value="Delete" onclick="deleteArea()" />
+                Article number: <input id="article_input" type="text" name="article_nr" /> <button class="js-save">Save</button>
+                <button class="js-delete">Delete</button>
             </form>
 
             <form id="controls" method="post" action="#">
-                <input type="button" value="Generate" onclick="generateImageMap()" /> <input type="button" value="Test 1" onclick="changeImage('test1.jpg')" />
-                <input type="button" value="Test 2" onclick="changeImage('test2.jpg')" />
-                <input type="button" value="Test 3" onclick="changeImage('test3.jpg')" />
-                <input type="button" value="Test 4" onclick="changeImage('test4.jpg')" />
+                <button class="js-generate">Generate</button> <button class="js-change-image" data-image="test1.jpg">Test 1</button>
+                <button class="js-change-image" data-image="test2.jpg">Test 2</button> <button class="js-change-image" data-image="test3.jpg">Test 3</button>
+                <button class="js-change-image" data-image="test4.jpg">Test 4</button>
             </form>
         </div>
 

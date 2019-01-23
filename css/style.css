@@ -67,3 +67,19 @@ form#controls {
     float: left;
     padding-top: 2em;
 }
+
+button {
+    background: #fff;
+    color: #000;
+    padding: 0.5em 1em;
+    border: 1px #000 solid;
+    font-weight: bold;
+    margin: 0.5em;
+    cursor: pointer;
+}
+
+input[type='text'] {
+    height: 15px;
+    border: 1px #000 solid;
+    padding: 0.5em 1em;
+}

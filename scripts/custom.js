@@ -1,6 +1,8 @@
 var currentDiv = 0;
 
-function saveArticleNr() {
+function saveArticleNr(e) {
+    e.preventDefault();
+
     $("div[rel|='selected']").attr('title', $('#article_input').val());
 }
 
@@ -39,7 +41,9 @@ function deselectAll() {
     $('#article_form').css('display', 'none');
 }
 
-function deleteArea() {
+function deleteArea(e) {
+    e.preventDefault();
+
     var area_id = $("div[rel|='selected']")
         .attr('id')
         .split('area_');
@@ -66,7 +70,9 @@ function getBasePath() {
     return basePath;
 }
 
-function generateImageMap() {
+function generateImageMap(e) {
+    e.preventDefault();
+
     var imageSrc = $('img#photo').attr('src');
 
     $.get('./generate.html').success(function(data) {
@@ -84,7 +90,7 @@ function generateImageMap() {
             var y2 = y1 + parseInt(this.style.height);
             var title = $(this).attr('title');
             imageMapAreas +=
-                '<area shape="rect" title="Spana in ' +
+                '<area shape="rect" title="Check out ' +
                 title +
                 '" coords="' +
                 x1 +
@@ -107,7 +113,11 @@ function generateImageMap() {
     });
 }
 
-function changeImage(image) {
+function changeImage(e) {
+    e.preventDefault();
+
+    var image = $(e.target).data('image');
+
     currentDiv = 0;
     deselectAll();
     deleteAllAreas();
@@ -174,6 +184,11 @@ $(document).ready(function() {
     $('img#photo').bind('dragstart', function() {
         return false;
     });
+
+    $('.js-generate').on('click', generateImageMap);
+    $('.js-change-image').on('click', changeImage);
+    $('.js-save').on('click', saveArticleNr);
+    $('.js-delete').on('click', deleteArea);
 
     $(document).keydown(function(e) {
         var code = e.keyCode ? e.keyCode : e.which;
